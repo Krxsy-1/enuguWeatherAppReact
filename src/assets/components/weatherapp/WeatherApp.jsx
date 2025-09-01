@@ -34,13 +34,15 @@ function WeatherApp() {
         }}
         >
             {weather ? (
+                
                 <div className="flex flex-col items-center gap-4">
+                    <br/>
                     <div className="weather-container bg-white/20 rounded-3xl p-8 w-[350px] shadow-2xl backdrop-blur-lg text-center border border-white/30">
                         <h2 className="text-3xl font-bold mb-2 drop-shadow">{weather.name}</h2>
                         <p className="text-7xl font-thin mb-2 tracking-wide drop-shadow-lg">{weather.main.temp}°</p>
                         <p className="text-x1 mb-4 capitalize">{weather.weather[0].description}</p>
-                        <span>H: {weather.main.temp_max}° </span>
-                        <span>   L: {weather.main.temp_min}</span>
+                        <span>H : {weather.main.temp_max}° </span>
+                        <span>   L : {weather.main.temp_min}</span>
                         {/* <span>Humidity: {weather.main.humidity}%</span>
                         <span>Wind Speed: {weather.wind.speed} m/s</span> */}
                     </div>
@@ -77,8 +79,53 @@ function WeatherApp() {
                     </div>
                     <div className="weather-container bg-white/10 rounded-3xl p-3 w-[350px] shadow-xl backdrop-blur-lg text-left mt-2">
                         <span className="text-sm">
-                            📝10-DAY FORECAST.</span>
+                            📝10-DAY FORECAST.
+                        </span>
                         <hr className="my-4"/>
+                        <div className="flex flex-col gap-2">
+                            <div className="flex flex-row items-center justify-between">
+                                <span>Today</span>
+                                <span>☁️</span>
+                                <span>23°</span>
+                            </div>
+                            <hr/>
+                            <div className="flex flex-row items-center justify-between">
+                                <span>Mon</span>
+                                <span>🌧️</span>
+                                <span>30°</span>
+                            </div>
+                            <hr/>
+                            <div className="flex flex-row items-center justify-between">
+                                <span>Tue</span>
+                                <span>🌧️</span>
+                                <span>28°</span>
+                            </div>
+                            <hr/>
+                            <div className="flex flex-row items-center justify-between">
+                                <span>Wed</span>
+                                <span>🌧️</span>
+                                <span>29°</span>
+                            </div>
+                            <hr/>
+                            <div className="flex flex-row items-center justify-between">
+                                <span>Thu</span>
+                                <span>🌧️</span>
+                                <span>31°</span>
+                            </div>
+                            <hr/>
+                            <div className="flex flex-row items-center justify-between">
+                                <span>Fri</span>
+                                <span>🌧️</span>
+                                <span>30°</span>
+                            </div>
+                            <hr/>
+                            <div className="flex flex-row items-center justify-between">
+                                <span>Sat</span>
+                                <span>🌧️</span>
+                                <span>30°</span>
+                            </div>
+                            <hr></hr>
+                        </div>
                     </div>
                 </div>
             ) : (

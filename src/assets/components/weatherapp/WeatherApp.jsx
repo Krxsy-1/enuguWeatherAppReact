@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../../App.css'
+import '../../../index.css'
 
 function WeatherApp() {
     const[weather, setWeather] = useState(null);
@@ -26,14 +26,16 @@ function WeatherApp() {
     }
 
     return (
-        <div>
+        <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-blue-400 to-blue-700 font-sans text-white">
             {weather ? (
-                <div className="weather-container">
-                    <h2>{weather.name}</h2>
-                    <p>Temperature: {weather.main.temp}°C</p>
-                    <p>Condition: {weather.weather[0].description}</p>
-                    <p>Humidity: {weather.main.humidity}%</p>
-                    <p>Wind Speed: {weather.wind.speed} m/s</p>
+                <div className="weather-container bg-white/20 rounded-3xl p-8 w-[350px] shadow-2xl backdrop-blur-lg text-center border border-white/30">
+                    <h2 className="text-3xl font-bold mb-2 drop-shadow">{weather.name}</h2>
+                    <p className="text-7xl font-thin mb-2 tracking-wide drop-shadow-lg">{weather.main.temp}°</p>
+                    <p className="text-x1 mb-4 capitalize">{weather.weather[0].description}</p>
+                    <span>H: {weather.main.temp_max}° </span>
+                    <span>   L: {weather.main.temp_min}</span>
+                    {/* <span>Humidity: {weather.main.humidity}%</span>
+                    <span>Wind Speed: {weather.wind.speed} m/s</span> */}
                 </div>
             ) : (
                 <p>Loading...</p>

@@ -26,16 +26,60 @@ function WeatherApp() {
     }
 
     return (
-        <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-blue-400 to-blue-700 font-sans text-white">
+        <div className="min-h-screen flex justify-center items-center font-sans text-white"
+        style={{
+            backgroundImage: "url('clouds2.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'no-repeat',
+        }}
+        >
             {weather ? (
-                <div className="weather-container bg-white/20 rounded-3xl p-8 w-[350px] shadow-2xl backdrop-blur-lg text-center border border-white/30">
-                    <h2 className="text-3xl font-bold mb-2 drop-shadow">{weather.name}</h2>
-                    <p className="text-7xl font-thin mb-2 tracking-wide drop-shadow-lg">{weather.main.temp}°</p>
-                    <p className="text-x1 mb-4 capitalize">{weather.weather[0].description}</p>
-                    <span>H: {weather.main.temp_max}° </span>
-                    <span>   L: {weather.main.temp_min}</span>
-                    {/* <span>Humidity: {weather.main.humidity}%</span>
-                    <span>Wind Speed: {weather.wind.speed} m/s</span> */}
+                <div className="flex flex-col items-center gap-4">
+                    <div className="weather-container bg-white/20 rounded-3xl p-8 w-[350px] shadow-2xl backdrop-blur-lg text-center border border-white/30">
+                        <h2 className="text-3xl font-bold mb-2 drop-shadow">{weather.name}</h2>
+                        <p className="text-7xl font-thin mb-2 tracking-wide drop-shadow-lg">{weather.main.temp}°</p>
+                        <p className="text-x1 mb-4 capitalize">{weather.weather[0].description}</p>
+                        <span>H: {weather.main.temp_max}° </span>
+                        <span>   L: {weather.main.temp_min}</span>
+                        {/* <span>Humidity: {weather.main.humidity}%</span>
+                        <span>Wind Speed: {weather.wind.speed} m/s</span> */}
+                    </div>
+                    <div className="weather-container bg-white/10 rounded-3xl p-3 w-[350px] shadow-xl backdrop-blur-lg text-left">
+                        Rainy conditions expected around 3pm. Wind gusts are up to 20km/h.
+                        <hr className="my-4"/>
+                        <div className="flex justify-between items-center mt-4">
+                            <div className="flex flex-col items-center">
+                                <span className="text-xs">Now</span>
+                                <span className="text-2xl">⛅</span>
+                                <span className="text-sm">30°</span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="text-xs">3pm</span>
+                                <span className="text-2xl">🌧️</span>
+                                <span className="text-sm">30°</span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="text-xs">4pm</span>
+                                <span className="text-2xl">🌧️</span>
+                                <span className="text-sm">29°</span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="text-xs">5pm</span>
+                                <span className="text-2xl">🌧️</span>
+                                <span className="text-sm">29°</span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <span className="text-xs">6pm</span>
+                                <span className="text-2xl">🌧️</span>
+                                <span className="text-sm">28°</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="weather-container bg-white/10 rounded-3xl p-3 w-[350px] shadow-xl backdrop-blur-lg text-left mt-2">
+                        <span className="text-sm">
+                            📝10-DAY FORECAST.</span>
+                        <hr className="my-4"/>
+                    </div>
                 </div>
             ) : (
                 <p>Loading...</p>

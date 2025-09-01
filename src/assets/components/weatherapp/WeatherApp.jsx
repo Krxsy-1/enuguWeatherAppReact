@@ -91,55 +91,55 @@ function WeatherApp() {
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Tue</span>
-                                <span>🌧️<br/>70%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">70%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Wed</span>
-                                <span>🌧️<br/>85%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">85%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Thu</span>
-                                <span>🌧️<br/>80%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">80%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Fri</span>
-                                <span>🌧️<br/>55%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">55%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Sat</span>
-                                <span>🌧️<br/>60%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">60%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Sun</span>
-                                <span>🌧️<br/>65%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">65%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Mon</span>
-                                <span>🌧️<br/>65%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">65%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Tue</span>
-                                <span>🌧️<br/>70%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">70%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>
                             <div className="flex flex-row items-center justify-between">
                                 <span>Wed</span>
-                                <span>🌧️<br/>65%</span>
+                                <span className="flex flex-col items-center justify-center"><span className="text-2xl">🌧️</span><span className="text-xs">65%</span></span>
                                 <span>22°</span>
                             </div>
                             <hr/>

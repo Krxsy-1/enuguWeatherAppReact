@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../../../index.css'
 
+const { VITE_API_URL, VITE_API_KEY } = import.meta.env;
+
+console.log('API URL:', VITE_API_URL);
+console.log('API Key:', VITE_API_KEY);
+
 function WeatherApp() {
     const[weather, setWeather] = useState(null);
     const[error, setError] =useState(null);
@@ -8,7 +13,7 @@ function WeatherApp() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Enugu&appid=5aede8faa236c6730b504520d2505d23&units=metric");
+                const response = await fetch(`${VITE_API_URL}?q=Enugu&appid=${VITE_API_KEY}&units=metric`);
                 const result = await response.json();
                 if (!response.ok || result.cod !== 200) {
                     throw new Error(result.message || "Failed to fetch weather data");
@@ -28,7 +33,7 @@ function WeatherApp() {
     return (
         <div className="min-h-screen flex justify-center items-center font-sans text-white"
         style={{
-            backgroundImage: "url('clouds2.jpg')",
+            backgroundImage: "url('clouds3.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'no-repeat',
         }}
